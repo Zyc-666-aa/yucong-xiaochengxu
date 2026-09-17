@@ -36,6 +36,23 @@ const designFlow={
     ]}
   ]
 };
+const modelFramework={
+  eyebrow:'MODEL / GPT-6 ASTRA',
+  title:'把模型放进设计流程，而不是放在作品之外。',
+  intro:'这套协作框架记录 GPT-6 Astra 在项目中的主力工作位置：拆解问题、实现原型、调试交互，再把每个结论放回真实文件和屏幕验证。',
+  model:'GPT-6 Astra',
+  role:'结构梳理、代码实现、交互调试、验证记录',
+  partners:'Figma / Image 2.5 / 微信开发者工具',
+  loop:[
+    {step:'01',title:'输入',body:'登记目标、约束、参考、现有代码和真实素材。'},
+    {step:'02',title:'协作',body:'把问题拆成状态、组件、接口和可验证任务。'},
+    {step:'03',title:'实现',body:'将建议落到 WXML、WXSS、JavaScript、Canvas 或 WebGL。'},
+    {step:'04',title:'复核',body:'在微信开发者工具、浏览器和真机路径中比对结果。'},
+    {step:'05',title:'取舍',body:'我确认素材、文案、版权和最终视觉，再决定是否保留。'}
+  ],
+  boundary:'项目记录的是 GPT-6 Astra 作为主力协作模型的使用方式，不包含模型 API、密钥或自动调用服务。',
+  reuse:'下一件作品可以沿用同一条输入、协作、实现、复核与取舍链路。'
+};
 const archive=[{id:'wordmark',title:'LUSH 字标',type:'品牌素材',image:'/assets/lush-wordmark-mobile.png',note:'项目界面中真实出现的银色充气字标。保留原始图像，移动端使用尺寸适配副本。'},{id:'visual-elements',title:'视觉元素',type:'贴纸与星体',image:'/assets/lush-visual-elements.png',note:'欢迎页 revealed 状态中真实出现的贴纸组合：电脑、手机、行星、纸飞机、星星、闪电、代码与对话气泡，统一归为一个视觉元素类别。'},{id:'gpt6-orb',title:'GPT-6 Astra 球体',type:'语言模型语义',image:'/assets/lush-gpt6-orb.png',note:'底部中心入口实际使用的冷色球体视觉。此处使用你提供的界面截图裁片作为档案预览，不表示官方 GPT-6 图标或官方素材。'},{id:'liquid-sphere',title:'液态玻璃球体',type:'交互材质',image:'/assets/lush-liquid-sphere.png',note:'欢迎页真实交互状态中的球体：随上滑、横向轻拨和释放改变位置、折射与高光；图片是现有界面状态截图，运行时由 Canvas/WebGL 渲染。'},{id:'intro',title:'开场片段',type:'4 秒 / 视频',image:'/assets/lush-intro-poster-mobile.png',note:'用户提供并在 Welcome 开场实际播放的 LUSH 膨胀视频；它仍是运行素材，不作为当前档案卡展示。'}];
 const knowledge={
   id:'root',
@@ -333,4 +350,4 @@ const addProjectJourney = item => projectJourneys[item.id] ? {...item,journey:{.
 const addProjectSnapshot = item => projectSnapshots[item.id] ? {...item,snapshot:projectSnapshots[item.id]} : item;
 const visibleItems = items.filter(item => visibleItemIds.has(item.id)).map(adaptYubingshao).map(addSectionAnalysis).map(addProjectSnapshot).map(addProjectJourney).map(addSectionVisuals).map(applyLushProcessMetadata).map(item=>({...item,cardValue:item.snapshot&&item.snapshot.value||''}));
 const visibleArchive = archive.filter(item => item.id !== 'intro');
-module.exports={items:visibleItems,sections,lab,designFlow,archive:visibleArchive,contact,resume,knowledge,processBoards,vibeMethod};
+module.exports={items:visibleItems,sections,lab,designFlow,modelFramework,archive:visibleArchive,contact,resume,knowledge,processBoards,vibeMethod};

@@ -9,7 +9,7 @@ const safePhone = value => String(value || '').replace(/[^\d+]/g, '');
 const knowledgeViewNode = node => node && node.id !== 'root' ? {...node,linkNodes:(node.links || []).map(id => content.knowledge.nodes.find(item => item.id === id)).filter(Boolean)} : node;
 
 Page({
-  data: {section:'work',sectionTitle:'作品',category:'项目经历',categories:['项目经历','设计作品','UI设计','VIBE CODING'],items:orderedItems,shown:orderedItems,sections:content.sections,contact:content.contact,resume:content.resume,lab:content.lab,designFlow:content.designFlow,labIndex:0,labFocus:content.lab[0],labImageKey:'lab-0',archive:content.archive,knowledge:false,knowledgeNode:content.knowledge,knowledgeNodes:content.knowledge.nodes,knowledgeTrail:[],menu:false,sheetLeaving:false,info:null,infoLeaving:false,infoImageFailed:false,failedImages:{},dockOrbFailed:false,aboutOrb:{dragX:0,dragY:0,shiftX:0,shiftY:0,tilt:0,dragging:false},contentTop:88,bottom:24,scrollTop:0},
+  data: {section:'work',sectionTitle:'作品',category:'项目经历',categories:['项目经历','设计作品','UI设计','VIBE CODING'],items:orderedItems,shown:orderedItems,sections:content.sections,contact:content.contact,resume:content.resume,lab:content.lab,designFlow:content.designFlow,modelFramework:content.modelFramework,labIndex:0,labFocus:content.lab[0],labImageKey:'lab-0',archive:content.archive,knowledge:false,knowledgeNode:content.knowledge,knowledgeNodes:content.knowledge.nodes,knowledgeTrail:[],menu:false,sheetLeaving:false,info:null,infoLeaving:false,infoImageFailed:false,failedImages:{},dockOrbFailed:false,aboutOrb:{dragX:0,dragY:0,shiftX:0,shiftY:0,tilt:0,dragging:false},contentTop:88,bottom:24,scrollTop:0},
 
   onLoad() {
     this._timers = new Set();
@@ -113,4 +113,3 @@ Page({
   noop() {},
   onUnload() { if(this._timers)this._timers.forEach(clearTimeout); if(this._timers)this._timers.clear(); }
 });
-
