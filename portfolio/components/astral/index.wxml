@@ -1,0 +1,1 @@
+<view class="astral {{quiet ? 'is-quiet' : ''}}" aria-hidden="true"><view wx:for="{{items}}" wx:key="id" class="float" style="{{item.style}}"><image class="float-image" src="{{item.src}}" style="{{item.rotation}}" mode="aspectFit"></image></view></view>

@@ -1,0 +1,9 @@
+{
+  "name": "lush-native-candidate-10",
+  "version": "0.1.0",
+  "private": true,
+  "description": "LUSH personal design portfolio native WeChat mini program candidate",
+  "dependencies": {
+    "gsap": "3.15.0"
+  }
+}

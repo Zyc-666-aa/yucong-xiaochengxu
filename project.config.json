@@ -1,0 +1,82 @@
+{
+  "description": "LUSH personal design portfolio mini program prototype",
+  "compileType": "miniprogram",
+  "libVersion": "3.17.2",
+  "appid": "wx8906b179a8517ac4",
+  "projectname": "LUSH-native-candidate-10",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true,
+    "coverView": true,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileWorklet": false,
+    "uglifyFileName": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "minifyWXML": true,
+    "localPlugins": false,
+    "disableUseStrict": false,
+    "useCompilerPlugins": false,
+    "condition": false,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    }
+  },
+  "simulatorType": "wechat",
+  "condition": {},
+  "simulatorPluginLibVersion": {},
+  "packOptions": {
+    "ignore": [
+      {
+        "value": "assets/lush-wordmark.png",
+        "type": "file"
+      },
+      {
+        "value": "assets/lush-intro-poster.png",
+        "type": "file"
+      },
+      {
+        "value": "README.md",
+        "type": "file"
+      },
+      {
+        "value": "VISUAL_SPEC.md",
+        "type": "file"
+      },
+      {
+        "value": "scene/source-manifest.json",
+        "type": "file"
+      },
+      {
+        "value": "portfolio/assets/playground-flow-map.svg",
+        "type": "file"
+      },
+      {
+        "value": "portfolio/assets/playground-hero.jpg",
+        "type": "file"
+      },
+      {
+        "value": "portfolio/assets/playground-no-shadow-composite.png",
+        "type": "file"
+      },
+      {
+        "value": "portfolio/assets/playground-reference.png",
+        "type": "file"
+      },
+      {
+        "value": "portfolio/assets/playground-shadow-plate-user.png",
+        "type": "file"
+      }
+    ],
+    "include": []
+  },
+  "editorSetting": {}
+}

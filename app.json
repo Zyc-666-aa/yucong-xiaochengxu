@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "subPackages": [
+    {
+      "root": "portfolio",
+      "pages": [
+        "pages/main/index",
+        "pages/detail/index"
+      ]
+    },
+    {
+      "root": "effects",
+      "pages": [
+        "pages/glass/index"
+      ]
+    }
+  ],
+  "preloadRule": {
+    "pages/index/index": {
+      "network": "all",
+      "packages": [
+        "portfolio"
+      ]
+    }
+  },
+  "window": {
+    "navigationStyle": "custom",
+    "backgroundColor": "#000000",
+    "backgroundTextStyle": "light",
+    "restartStrategy": "homePage"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

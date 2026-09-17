@@ -1,0 +1,11 @@
+{
+  "name": "gsap",
+  "version": "3.15.0",
+  "main": "index.js",
+  "module": "index.js",
+  "license": "Standard 'no charge' license: https://gsap.com/standard-license.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/greensock/GSAP"
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "desc": "LUSH portfolio prototype sitemap",
+  "rules": [{"action": "allow", "page": "pages/index/index"}]
+}

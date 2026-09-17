@@ -1,0 +1,11 @@
+<view class="liquid-page {{leaving ? 'leaving' : ''}}">
+ <canvas id="liquidCanvas" type="webgl" class="liquid-canvas" hidden="{{failed}}" binderror="failScene" aria-hidden="true"></canvas>
+ <image wx:if="{{failed}}" class="liquid-logo" src="/assets/lush-wordmark-mobile.png" mode="widthFix" aria-label="LUSH"></image>
+ <view wx:if="{{failed}}" class="solid-orb" aria-hidden="true"></view>
+ <view class="gesture-surface" bindtouchstart="touchStart" catchtouchmove="touchMove" bindtouchend="touchEnd" bindtouchcancel="touchCancel" aria-label="左右拖动球体，上滑或点击展开"></view>
+ <text wx:if="{{!ready}}" class="liquid-hint">{{hint}}</text>
+ <view class="liquid-copy {{ready ? 'ready' : ''}}">
+  <text class="liquid-title">探索郁葱的设计视角</text>
+  <button class="liquid-enter" bindtap="startPortfolio" disabled="{{!ready}}">开始探索</button>
+ </view>
+</view>

@@ -1,0 +1,9 @@
+# Local WeChat DevTools state
+project.private.config.json
+.wechat
+.wechatide
+node_modules/
+npm-debug.log*
+*.log
+.DS_Store
+Thumbs.db

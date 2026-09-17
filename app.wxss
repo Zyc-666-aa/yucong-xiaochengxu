@@ -1,0 +1,1 @@
+page{background:#050608;color:#f2f3f5;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif}button{margin:0;padding:0;background:transparent;border:0;color:inherit;font:inherit}button::after{border:0}.safe-top{padding-top:env(safe-area-inset-top)}
