@@ -1,13 +1,13 @@
 const {items}=require('../../data');
-const {getWindowInfo,getCapsuleRect,getBottomInset}=require('../../../utils/runtime');
+const {getWindowInfo,getCapsuleRect,getBottomInset,getViewportInfo}=require('../../../utils/runtime');
 Page({
-  data:{sections:[],activeSection:"summary",targetScroll:0,item:null,top:72,bottom:24,videoSrc:'',videoError:false,coverFailed:false,failedMedia:{},documentPreview:null,documentPreviewFailed:false,documentPreviewLoading:false},
+  data:{sections:[],activeSection:"summary",targetScroll:0,item:null,top:72,bottom:24,platformClass:'mobile',viewportClass:'phone',videoSrc:'',videoError:false,coverFailed:false,failedMedia:{},documentPreview:null,documentPreviewFailed:false,documentPreviewLoading:false},
   onLoad(query){
     this._disposed=false;
     const item=items.find(i=>i.id===query.id);
     const info=getWindowInfo();
     const cap=getCapsuleRect(info);
-    this.setData({sections:[...(item&&item.snapshot?[{id:'result',label:'结果'}]:[]),{id:'summary',label:'摘要'},...(item&&item.journey?[{id:'process',label:'过程'}]:[]),...(item&&item.journey&&item.journey.reviews&&item.journey.reviews.length?[{id:'review',label:'复盘'}]:[]),...(item&&item.documents&&item.documents.length?[{id:'documents',label:'资料'}]:[])],item:item||null,activeSection:item&&item.snapshot?'result':'summary',top:(cap.bottom||info.statusBarHeight+32)+16,bottom:Math.max(16,getBottomInset(info)),coverFailed:false,failedMedia:{}});
+    this.setData({sections:[...(item&&item.snapshot?[{id:'result',label:'结果'}]:[]),{id:'summary',label:'摘要'},...(item&&item.journey?[{id:'process',label:'过程'}]:[]),...(item&&item.journey&&item.journey.reviews&&item.journey.reviews.length?[{id:'review',label:'复盘'}]:[]),...(item&&item.documents&&item.documents.length?[{id:'documents',label:'资料'}]:[])],item:item||null,activeSection:item&&item.snapshot?'result':'summary',top:(cap.bottom||info.statusBarHeight+32)+16,bottom:Math.max(16,getBottomInset(info)),coverFailed:false,failedMedia:{},...getViewportInfo(info)});
     if(item && item.video)getApp().ensureIntroVideo().then(path=>{if(this._disposed)return;if(path)this.setData({videoSrc:path});else this.setData({videoError:true});});
   },
   jumpSection(e){
