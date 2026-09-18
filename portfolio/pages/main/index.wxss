@@ -464,7 +464,7 @@ button:focus{outline:1rpx solid #d9e7f4;outline-offset:3rpx}
 
 
 /* Design value pass 2026-09-15: native list mirrors the web reading order. */
-.portfolio .portfolio-value{display:flex;align-items:flex-end;justify-content:space-between;gap:20rpx;margin:0 0 26rpx;padding:24rpx 22rpx 22rpx;border:1rpx solid rgba(190,213,233,.18);border-radius:18rpx;background:linear-gradient(145deg,rgba(16,23,31,.94),rgba(5,8,11,.96));box-shadow:inset 0 1rpx rgba(240,248,255,.07),0 12rpx 26rpx rgba(0,0,0,.18);box-sizing:border-box}.portfolio .portfolio-value-copy{min-width:0}.portfolio .portfolio-value-name{display:block;margin-top:10rpx;color:#edf2f7;font-size:27rpx;line-height:1.3;font-weight:500}.portfolio .portfolio-value-role{display:block;margin-top:8rpx;color:#c1cedb;font-size:21rpx;line-height:1.45}.portfolio .portfolio-value-statement{display:block;margin-top:5rpx;color:#8594a3;font-size:18rpx;line-height:1.45}.portfolio .portfolio-value-actions{display:flex;flex:0 0 auto;gap:10rpx}.portfolio .value-action{min-height:44px;padding:0 18rpx;border:1rpx solid rgba(196,218,236,.25);border-radius:12rpx;background:rgba(7,11,15,.76);color:#cbd8e4;font-size:20rpx;white-space:nowrap}.portfolio .value-action text{margin-left:8rpx;color:#8ea2b4}.portfolio .project-picture .project-featured{position:absolute;right:16rpx;top:16rpx;padding:6rpx 10rpx;border:1rpx solid rgba(227,239,248,.36);border-radius:9rpx;background:rgba(6,10,14,.78);color:#e7f0f6;font-size:18rpx;letter-spacing:1rpx}.portfolio .project-value-line{display:flex;align-items:flex-start;gap:10rpx;margin:14rpx 24rpx 0;padding-left:10rpx;border-left:1rpx solid rgba(190,213,233,.34);color:#96a8b8;font-size:20rpx;line-height:1.55}.portfolio .project-value-line text:first-child{flex:0 0 auto;color:#c1d1df;font-size:17rpx;letter-spacing:1rpx}.portfolio .project-featured-card{border-color:rgba(207,226,241,.29)}
+.portfolio .portfolio-value{display:flex;align-items:flex-end;justify-content:space-between;gap:20rpx;margin:0 0 26rpx;padding:24rpx 22rpx 22rpx;border:1rpx solid rgba(190,213,233,.18);border-radius:18rpx;background:linear-gradient(145deg,rgba(16,23,31,.94),rgba(5,8,11,.96));box-shadow:inset 0 1rpx rgba(240,248,255,.07),0 12rpx 26rpx rgba(0,0,0,.18);box-sizing:border-box}.portfolio .portfolio-value-copy{min-width:0}.portfolio .portfolio-value-name{display:block;margin-top:10rpx;color:#edf2f7;font-size:27rpx;line-height:1.3;font-weight:500}.portfolio .portfolio-value-role{display:block;margin-top:8rpx;color:#c1cedb;font-size:21rpx;line-height:1.45}.portfolio .portfolio-value-actions{display:flex;flex:0 0 auto;gap:10rpx}.portfolio .value-action{min-height:44px;padding:0 18rpx;border:1rpx solid rgba(196,218,236,.25);border-radius:12rpx;background:rgba(7,11,15,.76);color:#cbd8e4;font-size:20rpx;white-space:nowrap}.portfolio .value-action text{margin-left:8rpx;color:#8ea2b4}.portfolio .project-picture .project-featured{position:absolute;right:16rpx;top:16rpx;padding:6rpx 10rpx;border:1rpx solid rgba(227,239,248,.36);border-radius:9rpx;background:rgba(6,10,14,.78);color:#e7f0f6;font-size:18rpx;letter-spacing:1rpx}.portfolio .project-value-line{display:flex;align-items:flex-start;gap:10rpx;margin:14rpx 24rpx 0;padding-left:10rpx;border-left:1rpx solid rgba(190,213,233,.34);color:#96a8b8;font-size:20rpx;line-height:1.55}.portfolio .project-value-line text:first-child{flex:0 0 auto;color:#c1d1df;font-size:17rpx;letter-spacing:1rpx}.portfolio .project-featured-card{border-color:rgba(207,226,241,.29)}
 @media(max-width:720rpx){.portfolio .portfolio-value{display:block}.portfolio .portfolio-value-actions{margin-top:16rpx}.portfolio .value-action{flex:1}.portfolio .project-value-line{margin-right:24rpx}}
 
 /* About composition pass 2026-09-18: identity, proof and next action share one
@@ -508,3 +508,60 @@ button:focus{outline:1rpx solid #d9e7f4;outline-offset:3rpx}
   .portfolio .section-about .about-fact>text:last-child{font-size:11.5px}
   .portfolio .section-about .preferences{grid-template-columns:1fr}
 }
+
+/* Responsive interaction pass: keep the identity block readable before the
+   project list and make the directory action discoverable. */
+.portfolio .portfolio-value{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;padding:18px 16px 14px;border-color:rgba(201,221,237,.25);background:linear-gradient(150deg,rgba(20,28,37,.97),rgba(5,9,13,.98));box-shadow:inset 0 1px rgba(245,250,255,.11),0 12px 26px rgba(0,0,0,.22)}
+.portfolio .portfolio-value-copy{min-width:0;min-inline-size:0}
+.portfolio .portfolio-value-name{margin-top:0;font-size:26rpx;line-height:1.25;letter-spacing:.01em}
+.portfolio .portfolio-value-role{margin-top:6rpx;color:#b7c6d4;font-size:19rpx;line-height:1.45}
+.portfolio .portfolio-value-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));min-width:0;gap:8px;margin-top:14px}
+.portfolio .value-action{display:flex;align-items:center;justify-content:center;box-sizing:border-box;width:100%;height:46px;min-width:0;min-height:46px;padding:0 10px;overflow:hidden;border-color:rgba(191,211,228,.24);border-radius:10px;background:rgba(5,9,13,.64);color:#aebdca;font-size:19rpx;line-height:1;white-space:nowrap}
+.portfolio .value-action-primary{background:linear-gradient(145deg,rgba(218,232,243,.23),rgba(33,45,57,.72));border-color:rgba(219,234,245,.5);color:#f1f5f8;box-shadow:inset 0 1px rgba(255,255,255,.12)}
+.portfolio .value-action:active{transform:translateY(1px);filter:brightness(.94)}
+.portfolio .value-action-chevron{position:relative;display:inline-block;width:10px;height:12px;margin-left:9px;color:#b8ccdc;flex:0 0 10px}
+.portfolio .value-action-chevron::before,.portfolio .value-action-chevron::after{content:"";position:absolute;left:1px;width:7px;height:1px;background:currentColor;transform-origin:right center}
+.portfolio .value-action-chevron::before{top:4px;transform:rotate(35deg)}
+.portfolio .value-action-chevron::after{top:8px;transform:rotate(-35deg)}
+.portfolio .dock-plus-label{position:absolute;left:50%;top:calc(100% + 5px);z-index:3;transform:translateX(-50%);pointer-events:none;color:#8e9aa6;font-size:12px;line-height:1;letter-spacing:1px;white-space:nowrap}
+@media(max-width:430px){
+  .portfolio .portfolio-value{grid-template-columns:minmax(0,1fr);align-items:stretch}
+  .portfolio .portfolio-value-actions{width:100%;margin-top:14px;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .portfolio .value-action{width:100%;padding-left:8px;padding-right:8px}
+}
+@media(max-width:360px){
+  .portfolio .page-content{padding-left:24rpx;padding-right:24rpx}
+  .portfolio .portfolio-value{padding:18rpx 16rpx 16rpx}
+  .portfolio .portfolio-value-name{font-size:24rpx}
+  .portfolio .portfolio-value-role{font-size:18rpx}
+  .portfolio .value-action{font-size:18rpx}
+}
+
+/* Cross-device compatibility pass: keep the same composition on Android
+   phones while giving the desktop client a readable canvas and dock. */
+.portfolio{overflow:hidden}
+.portfolio .page-scroll{box-sizing:border-box;overscroll-behavior:contain}
+.portfolio .page-content{min-width:0;overflow-wrap:anywhere;word-break:break-word}
+.portfolio .project-title-line,.portfolio .project-foot,.portfolio .portfolio-value-actions{min-width:0}
+.portfolio .project-name,.portfolio .project-category,.portfolio .project-subtitle,.portfolio .project-value-line text:last-child{min-width:0;overflow-wrap:anywhere;word-break:break-word}
+.portfolio .dock{box-sizing:content-box;height:136rpx;padding-top:22rpx}
+.portfolio.viewport-compact .page-content{padding-left:24rpx;padding-right:24rpx}
+.portfolio.viewport-compact .project-picture{height:320rpx}
+.portfolio.viewport-compact .project-title-line{align-items:flex-start;gap:8rpx}
+.portfolio.viewport-compact .project-name{font-size:34rpx}
+.portfolio.viewport-compact .project-category{max-width:38%;text-align:right}
+.portfolio.viewport-wide .page-scroll{width:100%;max-width:860px;left:50%;transform:translateX(-50%)}
+.portfolio.viewport-wide .page-content{max-width:800px;margin:0 auto;padding-left:32px;padding-right:32px}
+.portfolio.viewport-wide .section-head{padding-top:24px;padding-bottom:30px}
+.portfolio.viewport-wide .project-picture{height:340px}
+.portfolio.viewport-wide .work-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.portfolio.viewport-wide .project{margin-bottom:0}
+.portfolio.viewport-wide .archive-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 20px}
+.portfolio.viewport-wide .archive-image{height:220px}
+.portfolio.viewport-wide .dock{left:50%;right:auto;width:calc(100% - 32px);max-width:800px;transform:translateX(-50%);height:88px;padding-top:16px}
+.portfolio.viewport-wide .dock-side{width:96px;height:64px}
+.portfolio.viewport-wide .dock-plus{width:64px;height:64px}
+.portfolio.viewport-wide .dock-label{font-size:13px}
+.portfolio.viewport-wide .dock-plus-label{font-size:12px}
+.portfolio.viewport-wide .sheet{width:680px;max-width:calc(100% - 32px);margin:0 auto;box-sizing:border-box}
+.portfolio.viewport-wide .menu-sheet{max-height:88vh;overflow-y:auto}
