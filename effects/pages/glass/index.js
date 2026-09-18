@@ -1,7 +1,8 @@
 const {createNativeGlass}=require('../../glass-scene');
+const {getWindowInfo,getCapsuleRect,getViewportInfo}=require('../../../utils/runtime');
 Page({
- data:{top:72,on:true,failed:false,controlWidth:64,controlHeight:44},
- onLoad(){this._disposed=false;const info=wx.getWindowInfo?wx.getWindowInfo():wx.getSystemInfoSync();this.info=info;const cap=wx.getMenuButtonBoundingClientRect();this.setData({top:(cap.bottom||info.statusBarHeight+32)+16});},
+ data:{top:72,on:true,failed:false,controlWidth:64,controlHeight:44,platformClass:'mobile',viewportClass:'phone'},
+ onLoad(){this._disposed=false;const info=getWindowInfo();this.info=info;const cap=getCapsuleRect(info);this.setData({top:(cap.bottom||info.statusBarHeight+32)+16,...getViewportInfo(info)});},
  onReady(){this.init();},
  init(){wx.createSelectorQuery().in(this).select('#glassCanvas').fields({node:true,size:true,rect:true}).exec(r=>{if(this._disposed)return;try{const box=r[0];if(!box||!box.node)throw Error('Canvas unavailable');this.box=box;this.scene=createNativeGlass(box.node,{pixelRatio:this.info.pixelRatio,on:this.data.on,mode:this.info.theme==='light'?'light':'dark',createCanvas:()=>wx.createOffscreenCanvas({type:'2d',width:512,height:512}),onError:()=>this.fail()});this.scene.resize(box.width,box.height);this.scene.setSize(1);const foot=this.scene.measureSwitch();this.setData({controlWidth:Math.max(44,foot.width),controlHeight:Math.max(44,foot.height)});}catch(error){this.fail();}});},
  toggle(){const on=!this.data.on;this.setData({on});if(this.scene)this.scene.setOn(on);},
