@@ -466,3 +466,45 @@ button:focus{outline:1rpx solid #d9e7f4;outline-offset:3rpx}
 /* Design value pass 2026-09-15: native list mirrors the web reading order. */
 .portfolio .portfolio-value{display:flex;align-items:flex-end;justify-content:space-between;gap:20rpx;margin:0 0 26rpx;padding:24rpx 22rpx 22rpx;border:1rpx solid rgba(190,213,233,.18);border-radius:18rpx;background:linear-gradient(145deg,rgba(16,23,31,.94),rgba(5,8,11,.96));box-shadow:inset 0 1rpx rgba(240,248,255,.07),0 12rpx 26rpx rgba(0,0,0,.18);box-sizing:border-box}.portfolio .portfolio-value-copy{min-width:0}.portfolio .portfolio-value-name{display:block;margin-top:10rpx;color:#edf2f7;font-size:27rpx;line-height:1.3;font-weight:500}.portfolio .portfolio-value-role{display:block;margin-top:8rpx;color:#c1cedb;font-size:21rpx;line-height:1.45}.portfolio .portfolio-value-statement{display:block;margin-top:5rpx;color:#8594a3;font-size:18rpx;line-height:1.45}.portfolio .portfolio-value-actions{display:flex;flex:0 0 auto;gap:10rpx}.portfolio .value-action{min-height:44px;padding:0 18rpx;border:1rpx solid rgba(196,218,236,.25);border-radius:12rpx;background:rgba(7,11,15,.76);color:#cbd8e4;font-size:20rpx;white-space:nowrap}.portfolio .value-action text{margin-left:8rpx;color:#8ea2b4}.portfolio .project-picture .project-featured{position:absolute;right:16rpx;top:16rpx;padding:6rpx 10rpx;border:1rpx solid rgba(227,239,248,.36);border-radius:9rpx;background:rgba(6,10,14,.78);color:#e7f0f6;font-size:18rpx;letter-spacing:1rpx}.portfolio .project-value-line{display:flex;align-items:flex-start;gap:10rpx;margin:14rpx 24rpx 0;padding-left:10rpx;border-left:1rpx solid rgba(190,213,233,.34);color:#96a8b8;font-size:20rpx;line-height:1.55}.portfolio .project-value-line text:first-child{flex:0 0 auto;color:#c1d1df;font-size:17rpx;letter-spacing:1rpx}.portfolio .project-featured-card{border-color:rgba(207,226,241,.29)}
 @media(max-width:720rpx){.portfolio .portfolio-value{display:block}.portfolio .portfolio-value-actions{margin-top:16rpx}.portfolio .value-action{flex:1}.portfolio .project-value-line{margin-right:24rpx}}
+
+/* About composition pass 2026-09-18: identity, proof and next action share one
+   reading path; utility controls remain available without competing with it. */
+.portfolio .page-content.section-about{padding-top:72px!important;padding-bottom:156px!important}
+.portfolio .section-about .about-sky{opacity:.48}
+.portfolio .section-about .about-heading,
+.portfolio .section-about .about-actions,
+.portfolio .section-about .about-utility{max-width:684rpx;margin-left:auto;margin-right:auto}
+.portfolio .section-about .about-heading{padding:18px 0 0;text-align:left;align-items:stretch}
+.portfolio .section-about .about-identity{max-width:640rpx}
+.portfolio .section-about .about-name{margin:14px 0 0;padding:0;color:#f0f2f5;font-size:36px;line-height:1.08;letter-spacing:0;font-weight:420}
+.portfolio .section-about .about-name-en{margin-top:8px;color:#8797a7;font-size:11px;letter-spacing:.28em;line-height:1.2}
+.portfolio .section-about .about-role{margin-top:15px;color:#e0e6ec;font-size:16px;line-height:1.4}
+.portfolio .section-about .about-statement{max-width:640rpx;margin:9px 0 0;color:#c5d1dc;font-size:15px;line-height:1.55}
+.portfolio .section-about .about-facts{margin-top:18px;border-top:1rpx solid rgba(197,216,237,.16)}
+.portfolio .section-about .about-fact{display:flex;gap:12px;padding:9px 0;border-bottom:1rpx solid rgba(197,216,237,.11)}
+.portfolio .section-about .about-fact>text:first-child{flex:0 0 42px;color:#b4c6d8;font-size:11px;letter-spacing:.12em;line-height:1.65}
+.portfolio .section-about .about-fact>text:last-child{min-width:0;flex:1;color:#8795a5;font-size:12px;line-height:1.58}
+.portfolio .section-about .about-actions{margin-top:20px}
+.portfolio .section-about .about-actions-label{display:block;margin:0 0 8px;color:#708294;font-size:10px;letter-spacing:.18em;line-height:1.4}
+.portfolio .section-about .about-links{max-width:none;margin:0;gap:8px}
+.portfolio .section-about .link-row{min-height:44px;height:54px;border-radius:15px}
+.portfolio .section-about .link-row-primary{height:58px}
+.portfolio .section-about .link-row-tertiary{height:44px;padding-left:0;border-color:transparent;background:transparent;box-shadow:none;color:#8c9aa8;font-size:12px}
+.portfolio .section-about .link-row-tertiary .line-icon{opacity:.68}
+.portfolio .section-about .about-utility{margin-top:18px;padding-top:13px;border-top:1rpx solid rgba(197,216,237,.11)}
+.portfolio .section-about .about-utility-label{display:block;color:#5f7181;font-size:10px;letter-spacing:.16em;line-height:1.4}
+.portfolio .section-about .preferences{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:7px;padding:0}
+.portfolio .section-about .preferences button{min-height:44px;height:44px;padding:0;border:0;border-bottom:0;border-radius:0;background:transparent;color:#728292;font-size:11px}
+.portfolio .section-about .preferences button text{color:#586b7d;font-size:10px}
+@media(max-width:680rpx){
+  .portfolio .section-about .about-heading,.portfolio .section-about .about-actions,.portfolio .section-about .about-utility{max-width:100%}
+}
+@media(max-width:360px){
+  .portfolio .section-about .about-heading{padding-top:12px}
+  .portfolio .section-about .about-name{font-size:33px}
+  .portfolio .section-about .about-statement{font-size:14px}
+  .portfolio .section-about .about-fact{gap:9px}
+  .portfolio .section-about .about-fact>text:first-child{flex-basis:38px}
+  .portfolio .section-about .about-fact>text:last-child{font-size:11.5px}
+  .portfolio .section-about .preferences{grid-template-columns:1fr}
+}
