@@ -17,8 +17,8 @@
         <view class="page-end"><view></view><text>保持好奇，持续创作。</text><view></view></view>
       </block>
       <block wx:elif="{{section === 'lab'}}">
-        <view class="section-head"><text class="eyebrow">DESIGN PROCESS</text><text class="page-title">设计思路</text><text class="intro-line">从问题定义，到真实屏幕验证。</text></view>
-        <view class="design-flow" aria-label="设计思路树">
+        <view class="section-head"><text class="eyebrow">DESIGN PROCESS</text><text class="page-title">设计工作流</text><text class="intro-line">从问题定义，到真实屏幕验证。</text></view>
+        <view class="design-flow" aria-label="设计工作流树">
           <view class="design-flow-root"><text class="design-flow-index">{{designFlow.root.index}}</text><view><text class="flow-label">起点</text><text class="design-flow-root-title">{{designFlow.root.title}}</text><text class="design-flow-root-body">{{designFlow.root.body}}</text><text class="flow-thinking"><text class="flow-label">思考</text>{{designFlow.root.thinking}}</text></view></view>
           <view class="model-framework" aria-label="GPT-6 Astra 协作框架">
             <view class="model-framework-head"><text class="eyebrow">{{modelFramework.eyebrow}}</text><text class="model-framework-title">{{modelFramework.title}}</text><text class="model-framework-intro">{{modelFramework.intro}}</text></view>
