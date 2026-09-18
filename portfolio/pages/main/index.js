@@ -1,6 +1,6 @@
 const content = require('../../data');
 const orderedItems = content.items.slice().sort((a,b)=>a.id==='lush'?-1:b.id==='lush'?1:0);
-const {getWindowInfo, getCapsuleRect, getBottomInset} = require('../../../utils/runtime');
+const {getWindowInfo, getCapsuleRect, getBottomInset, getViewportInfo} = require('../../../utils/runtime');
 const contact = content.contact;
 const resume = content.resume;
 const contactValue = () => [contact.phone && ('电话：' + contact.phone), contact.wechat && ('微信：' + contact.wechat), contact.email && ('邮箱：' + contact.email)].filter(Boolean).join('\n');
@@ -9,20 +9,21 @@ const safePhone = value => String(value || '').replace(/[^\d+]/g, '');
 const knowledgeViewNode = node => node && node.id !== 'root' ? {...node,linkNodes:(node.links || []).map(id => content.knowledge.nodes.find(item => item.id === id)).filter(Boolean)} : node;
 
 Page({
-  data: {section:'work',sectionTitle:'作品',category:'项目经历',categories:['项目经历','设计作品','UI设计','VIBE CODING'],items:orderedItems,shown:orderedItems,sections:content.sections,contact:content.contact,resume:content.resume,lab:content.lab,designFlow:content.designFlow,modelFramework:content.modelFramework,labIndex:0,labFocus:content.lab[0],labImageKey:'lab-0',archive:content.archive,knowledge:false,knowledgeNode:content.knowledge,knowledgeNodes:content.knowledge.nodes,knowledgeTrail:[],menu:false,sheetLeaving:false,info:null,infoLeaving:false,infoImageFailed:false,failedImages:{},dockOrbFailed:false,aboutOrb:{dragX:0,dragY:0,shiftX:0,shiftY:0,tilt:0,dragging:false},contentTop:88,bottom:24,scrollTop:0},
+  data: {section:'work',sectionTitle:'作品',category:'全部',categories:['全部','设计作品','UI设计','VIBE CODING'],items:orderedItems,shown:orderedItems,sections:content.sections,contact:content.contact,resume:content.resume,lab:content.lab,designFlow:content.designFlow,modelFramework:content.modelFramework,labIndex:0,labFocus:content.lab[0],labImageKey:'lab-0',archive:content.archive,knowledge:false,knowledgeNode:content.knowledge,knowledgeNodes:content.knowledge.nodes,knowledgeTrail:[],menu:false,sheetLeaving:false,info:null,infoLeaving:false,infoImageFailed:false,failedImages:{},dockOrbFailed:false,aboutOrb:{dragX:0,dragY:0,shiftX:0,shiftY:0,tilt:0,dragging:false},contentTop:88,bottom:24,dockHeight:88,dockTopPadding:16,scrollBottom:120,contentBottom:32,platformClass:'mobile',viewportClass:'phone',scrollTop:0},
 
   onLoad() {
     this._timers = new Set();
     this._positions = {};
     const info = getWindowInfo();
     const cap = getCapsuleRect(info);
-    this.setData({contentTop:(cap.bottom || info.statusBarHeight + 32) + 16,bottom:Math.max(16,getBottomInset(info)),vibeMethod:content.vibeMethod});
+    const viewport = getViewportInfo(info);
+    this.setData({contentTop:(cap.bottom || info.statusBarHeight + 32) + 16,bottom:Math.max(16,getBottomInset(info)),vibeMethod:content.vibeMethod,...viewport});
     if (typeof wx.showShareMenu === 'function') wx.showShareMenu({withShareTicket:true});
   },
 
   later(fn, ms) { const id = setTimeout(() => { this._timers.delete(id); fn(); }, ms); this._timers.add(id); },
   onScroll(e) { this._positions[this.data.section] = e.detail.scrollTop; },
-  selectCategory(e) { const category=e.currentTarget.dataset.category; const filterCategory=category==='项目经历'?'全部':category==='设计作品'?'平面设计':category; this.setData({category,shown:filterCategory==='全部'?this.data.items:this.data.items.filter(i=>i.category===filterCategory)}); },
+  selectCategory(e) { const category=e.currentTarget.dataset.category; const filterCategory=category==='全部'?'全部':category==='设计作品'?'平面设计':category; this.setData({category,shown:filterCategory==='全部'?this.data.items:this.data.items.filter(i=>i.category===filterCategory)}); },
   openProject(e) { const id=e.currentTarget.dataset.id; if(!content.items.some(i=>i.id===id)||this._navigating)return; this._navigating=true; wx.navigateTo({url:'/portfolio/pages/detail/index?id='+id,complete:()=>{this._navigating=false;}}); },
   switchSection(e) { const id=typeof e==='string'?e:e.currentTarget.dataset.id; const section=content.sections.find(s=>s.id===id); if(!section)return; this.setData({section:id,sectionTitle:section.label,scrollTop:this._positions[id]||0,menu:false,sheetLeaving:false,info:null}); },
   works() { this.switchSection('work'); },
