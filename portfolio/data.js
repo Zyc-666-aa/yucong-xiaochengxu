@@ -4,7 +4,6 @@ const resume = {
   english:'Albert Lush',
   role:'视觉设计 / 交互原型 / AI 辅助创作',
   focus:['平面设计','UI设计','VIBE CODING'],
-  summary:'把视觉想法做成可操作、可验证的作品。',
   note:'详细履历、项目成果与下载文件将在资料确认后更新。'
 };
 const items = [
