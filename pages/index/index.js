@@ -1,8 +1,9 @@
 const {Motion}=require('../../scene/liquid-core');
 const {Renderer}=require('../../scene/liquid-renderer');
+const {getWindowInfo,getViewportInfo}=require('../../utils/runtime');
 Page({
- data:{phase:'idle',ready:false,failed:false,leaving:false,hint:'上滑展开，或点击球体'},
- onLoad(){this.motion=new Motion(false);this.hidden=false;},
+ data:{phase:'idle',ready:false,failed:false,leaving:false,hint:'上滑展开，或点击球体',platformClass:'mobile',viewportClass:'phone'},
+ onLoad(){this.motion=new Motion(false);this.hidden=false;const info=getWindowInfo();this.setData(getViewportInfo(info));},
  onReady(){this.initScene();},
  onShow(){this.hidden=false;if(this.canvas)this.startLoop();},
  onHide(){this.hidden=true;this.motion.release(Date.now(),true);this.stopLoop();},
