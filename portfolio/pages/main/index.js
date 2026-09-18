@@ -4,7 +4,7 @@ const {getWindowInfo, getCapsuleRect, getBottomInset} = require('../../../utils/
 const contact = content.contact;
 const resume = content.resume;
 const contactValue = () => [contact.phone && ('电话：' + contact.phone), contact.wechat && ('微信：' + contact.wechat), contact.email && ('邮箱：' + contact.email)].filter(Boolean).join('\n');
-const resumeValue = () => [resume.name + ' / ' + resume.english, resume.role, '方向：' + resume.focus.join(' / '), resume.summary, contactValue(), resume.note].filter(Boolean).join('\n');
+const resumeValue = () => [resume.name + ' / ' + resume.english, resume.role, '方向：' + resume.focus.join(' / '), contactValue(), resume.note].filter(Boolean).join('\n');
 const safePhone = value => String(value || '').replace(/[^\d+]/g, '');
 const knowledgeViewNode = node => node && node.id !== 'root' ? {...node,linkNodes:(node.links || []).map(id => content.knowledge.nodes.find(item => item.id === id)).filter(Boolean)} : node;
 
