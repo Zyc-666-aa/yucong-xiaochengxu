@@ -11,7 +11,34 @@ const items = [
   {id:'yuxiaobing',category:'平面设计',kind:'设计项目',status:'项目',cardMeta:'2025.10 设计项目',title:'石湾玉冰烧',subtitle:'品牌延展、IP设计与文创物料概念展板。',cover:'/portfolio/assets/yuxiaobing/yuxiaobing-01.jpg',media:['/portfolio/assets/yuxiaobing/yuxiaobing-01.jpg'],year:'2025.10',role:'品牌延展 / IP设计 / 文创概念',tools:'Photoshop + Procreate',references:'Pinterest、抖音、小红书等公开平台的视觉参考',intro:'这是我大二时围绕广东老字号石湾玉冰烧做的一次品牌延展与 IP 设计练习。我从瓶形、标签和传统识别元素出发，尝试把老字号转成更年轻的角色，再延伸到文创物料和展示展板。展板得到企业的商业背书和选择性鼓励，但没有实际落地，仍是一份学生阶段的概念方案，里面既有想打破传统品牌表达的创新尝试，也保留着当时不够成熟的设计取舍。',sections:[{title:'业务背景',body:'石湾玉冰烧是广东老字号。我当时想从品牌已有的瓶形、标签和识别元素出发，试着做一次面向年轻表达的品牌延展。'},{title:'用户',body:'我把预设受众放在对传统品牌有印象、但也愿意接受年轻视觉和文创物料的人身上。这是当时的设计假设，没有做正式用户调研。'},{title:'问题',body:'问题不是重做一个新品牌，而是怎么保留石湾玉冰烧的识别度，又让它不只停留在传统包装里；角色和物料也要在小尺寸上被认出来。'},{title:'策略',body:'从瓶形、标签、颜色和品牌符号中提取特征，先做 IP 转译，再把角色放进日常文创场景，用一组展板把逻辑串起来。'},{title:'设计方案',body:'完成角色设定、三视图、表情和标准色，再延展到袋子、杯子、包装、口罩等物料，分别整理为 IP 设计展板和文创物料概念展板。'},{title:'结果',body:'形成两页合并的项目展板，获得企业的商业背书和选择性鼓励，表达了活化广东老字号、松动传统品牌表达限制的尝试，但没有进入生产、品牌运营或市场验证。'},{title:'下一步',body:'如果继续，我会先与品牌方确认使用边界，再做角色规范、材质打样、成本和小范围反馈，看看哪些物料真正成立；目前它仍是学生阶段的概念项目。'}],documents:[{id:'yuxiaobing-01',title:'IP设计展板',type:'PDF',file:'/portfolio/assets/yuxiaobing/yuxiaobing-project.pdf',preview:'/portfolio/assets/yuxiaobing/yuxiaobing-01.jpg',notes:{idea:'我先从石湾玉冰烧的瓶子和品牌颜色里找特征，想把它们变成一个更容易记住的角色。',process:'先画角色设定，再补三视图、表情、标准色和几组插画，最后把内容排成一张说明板。',thinking:'我希望角色看起来亲切一点，所以用了比较圆的比例和明显的黄色、红色识别点。',problems:'信息放得比较满，手机上缩小后文字不容易读；角色细节和版式还有不够统一的地方。',limitations:'这张主要是设计说明，真实的品牌使用规范和完整打样还没有做完。'}},{id:'yuxiaobing-02',title:'文创物料概念展板',type:'PDF',file:'/portfolio/assets/yuxiaobing/yuxiaobing-project.pdf',preview:'/portfolio/assets/yuxiaobing/yuxiaobing-02.jpg',notes:{idea:'我想看看这个角色放到实际物品上会不会成立，所以做了几组文创展示。',process:'把角色和插画分别放到袋子、杯子、包装和口罩等物料上，再调整大小和位置。',thinking:'应用图能让我检查角色在不同尺寸上是否还清楚，也方便老师快速看到延展方向。',problems:'部分效果图更像展示稿，和真实拍摄的材质还有差别；物料上的信息层级也可以再整理。',limitations:'没有继续做打样、成本和使用反馈，这部分暂时只能说明视觉方向。'}}]},
   {id:'lush',category:'VIBE CODING',kind:'微信小程序交互原型',status:'项目',cardMeta:'2026 / 小程序原型',title:'LUSH 小程序',subtitle:'用一个可操作的入口，把作品、过程和资料串起来。',cover:'/portfolio/assets/lush-cover-v2.jpg',media:['/portfolio/assets/lush-cover-v2.jpg','/portfolio/assets/lush-idle.jpg'],year:'2026',role:'产品概念 / 交互设计 / AI 辅助开发',tools:'HTML / CSS / JavaScript / Canvas / WebGL / 微信小程序原生组件',references:'用户提供的参考视频、截图与本地项目素材；液态玻璃方法参考公开技术资料',intro:'这是我给自己做的一次作品集小程序原型。我不想只把项目排成列表，所以先把“进入作品集”做成一个可以上滑、拖动、点击的欢迎页，再把项目详情、PDF、图片放大和知识库入口接进去。当前是本地可运行候选，不是已经上线的产品。',sections:[{title:'业务背景',body:'整理求职作品集时，我发现 PDF 和普通网页能装下内容，却不容易让人感受到我的交互和实现能力。于是我把 LUSH 当成一次练习，先做一个作品集本身也能被使用的入口。'},{title:'用户',body:'主要面向招聘方、老师、同学和第一次从手机打开页面的人。我猜他们会先判断我是谁、能不能顺利进入，再决定要不要继续看项目；没有做正式访谈。'},{title:'问题',body:'我需要同时解决两件事：欢迎页要有记忆点，项目内容又不能被动效挡住；HTML 与微信小程序还要面对触摸、安全区、视频、图片、PDF 和 WebGL 能力差异。'},{title:'策略',body:'先确定一条简单路径：播放开场 → 上滑或点击进入 → 看作品 → 打开详情。视觉上只保留黑色星空、银色字标、冷灰蓝玻璃和少量贴纸，数据上让浏览器和原生共用同一套项目内容。我还把 LUSH 字标的显示宽度收至原始基准的约 80%，给球体和贴纸留出呼吸空间。'},{title:'设计方案',body:'欢迎页用 Canvas/WebGL 做球体、背景采样、折射、边缘高光和贴纸出场，文字和按钮仍用真实 HTML/WXML。进入后用筛选、项目卡和详情页承接内容，详情按“业务背景 → 用户 → 问题 → 策略 → 设计方案 → 结果 → 下一步”组织，并提供图片放大、PDF、视频和知识库双链入口。字标只改变显示尺寸，不改原始素材，避免为了缩小而重新生成或裁切。'},{title:'结果',body:'完成浏览器预览和微信小程序候选工程。当前能展示开场、拖拽、释放、贴纸从球内出现、作品列表、项目详情和资料预览；浏览器四种尺寸与手势回归已通过，微信模拟器和真机体验还要继续确认。本轮又把字标按原始显示基准缩小约 20%，并同步了 WebGL 与失败回退路径。'},{title:'下一步',body:'下一轮先验证微信模拟器、iPhone 和 Android 的触摸、WebGL、视频解码、图片、PDF、安全区和返回恢复，再找几位访客完整走一次。根据反馈减少无效装饰，补齐正式简历、公开联系动作和可追踪的项目结果。同时复核 320、390、430 和 768 宽度下的字标层级。'}],video:true},
   {id:'light',category:'平面设计',kind:'AI 图像实验',status:'视觉实验',cardMeta:'2026 / AI 图像实验',title:'光与形',subtitle:'在几何的边缘，观察光的转折。',cover:'/portfolio/assets/light-study.jpg',media:['/portfolio/assets/light-study.jpg'],year:'2026',role:'艺术指导 / AI 图像创作',intro:'一次围绕金属、负空间和光线展开的视觉实验。以单一体块组织画面，把注意力交给细小的材质变化。',sections:[{title:'限制，成为方向',body:'保持近乎单色的画面，只保留一件主体。用柔和反光和微小的表面纹理建立层次，避免多余装饰。'},{title:'实验说明',body:'本图为作品集原型配套创作的 AI 视觉实验，展示视觉方向与表达方法，不代表客户委托项目。'}]},
-  {id:'wave',category:'VIBE CODING',kind:'空间节奏研究',status:'视觉实验',cardMeta:'2026 / 空间节奏研究',title:'回声切片',subtitle:'把时间想象成一组可见的轮廓。',cover:'/portfolio/assets/motion-study.jpg',media:['/portfolio/assets/motion-study.jpg'],year:'2026',role:'视觉概念 / AI 图像创作',intro:'以层叠曲面研究节奏与空间的关系。图像作为动效的风格帧，记录形态、光线和留白之间的平衡。',sections:[{title:'先确定节奏',body:'让曲面的间隔形成阅读方向，明暗逐渐退向背景。当前展示为静态风格帧，用于判断后续运动的视觉方向。'},{title:'实验说明',body:'这是 AI 生成的视觉实验与动效前期研究，当前素材不包含成片动画。'}]}
+  {id:'wave',category:'VIBE CODING',kind:'空间节奏研究',status:'视觉实验',cardMeta:'2026 / 空间节奏研究',title:'回声切片',subtitle:'把时间想象成一组可见的轮廓。',cover:'/portfolio/assets/motion-study.jpg',media:['/portfolio/assets/motion-study.jpg'],year:'2026',role:'视觉概念 / AI 图像创作',intro:'以层叠曲面研究节奏与空间的关系。图像作为动效的风格帧，记录形态、光线和留白之间的平衡。',sections:[{title:'先确定节奏',body:'让曲面的间隔形成阅读方向，明暗逐渐退向背景。当前展示为静态风格帧，用于判断后续运动的视觉方向。'},{title:'实验说明',body:'这是 AI 生成的视觉实验与动效前期研究，当前素材不包含成片动画。'}]},
+  {
+    id:'dear-you-premiere',
+    category:'平面设计',
+    kind:'设计项目',
+    status:'项目',
+    cardMeta:'昆士兰首映礼 / 视觉交付',
+    title:'给阿嫲的情书',
+    subtitle:'澳大利亚昆士兰首映礼的视觉设计与现场物料。',
+    cover:'/portfolio/assets/dear-you-premiere/poster.jpg',
+    coverMode:'aspectFit',
+    media:['/portfolio/assets/dear-you-premiere/poster.jpg','/portfolio/assets/dear-you-premiere/venue-wall.jpg','/portfolio/assets/dear-you-premiere/print-detail.jpg','/portfolio/assets/dear-you-premiere/event-rollup.jpg','/portfolio/assets/dear-you-premiere/exhibition.jpg','/portfolio/assets/dear-you-premiere/cinema-lobby.jpg'],
+    year:'JUNE 24',
+    role:'远程视觉设计 / 海报与物料 / 首映礼交付',
+    tools:'Canva + Procreate + AI 辅助草稿',
+    references:'导演与主办方提供的影片信息、场地照片和物料需求',
+    intro:'这是一次面向澳大利亚昆士兰地区首映礼的远程视觉交付。我与 Roland W 先生保持两小时时差协作，从主视觉方向、海报版式到现场延展物料逐步确认，让同一套红棕色叙事视觉进入影院墙面、立牌、展板与宣传物料。现场照片显示物料已进入首映礼空间；观众反馈、传播数据和后续商业转化没有纳入本项目结论。',
+    cardValue:'跨时区协作 / 主视觉系统 / 现场落地',
+    sections:[
+      {title:'业务背景',body:'项目对应电影《给阿嫲的情书》在澳大利亚昆士兰州的首映礼。我配合 Roland W 先生与澳大利亚潮汕青年会等协作机构提供的活动信息，完成首映礼海报及现场宣传物料的视觉交付。'},
+      {title:'用户',body:'现场观众、影片相关社群、合作机构与影院访客是主要阅读者。他们需要在短时间内识别影片、首映地点与活动氛围；这里的受众判断来自活动场景，没有做正式用户调研。'},
+      {title:'问题',body:'两小时时差让反馈、改稿和确认必须被压缩在清晰的沟通窗口内；同时主海报、墙面、立牌、展板和宣传物料需要保持同一套信息层级，不能每张图各自成立。'},
+      {title:'策略',body:'以图五的竖版主海报作为视觉源头，保留手写片名、Dear you、红棕色底、红花与橄榄枝等核心线索，再把标题、导演、首映信息、机构与合作方分成可复用的信息层。'},
+      {title:'设计方案',body:'前期用 AI 辅助探索构图和气氛，再用 Procreate 处理手绘质感，用 Canva 完成版式、信息编排和多尺寸适配；同时借助 AI 整理物料尺寸、打印任务和交付清单。远程沟通中先锁主视觉，再依次延展墙面、滚动展架、展板和现场指引，降低跨时区反复返工。'},
+      {title:'结果',body:'完成首映礼主海报及一组现场宣传物料，并在影院墙面、展板、立牌与入口空间中实际出现。现场照片可以证明设计进入活动现场，但没有把它延伸成票房、传播量或观众满意度结论。'},
+      {title:'下一步',body:'如果继续做，我会把主视觉拆成带出血和安全区的印刷规范，建立双语信息与合作方标识的交付清单，再补充文件版本、印刷校样和活动后的反馈记录，让下一次远程交付更容易复用。'}
+    ]
+  }
 ];
 const sections=[{id:'lab',label:'设计工作流',note:'从问题到验证',symbol:'lab'},{id:'work',label:'作品',note:'图像、界面与动效',symbol:'star'},{id:'archive',label:'素材档案',note:'留下可以继续的线索',symbol:'archive'},{id:'about',label:'关于',note:'ALBERT LUSH',symbol:'person'}];
 const lab=[{index:'01',title:'方向',label:'确定画面要说什么',body:'黑色空间、单一主体、克制的银色与冷色反光。先决定保留什么，也决定删去什么。',image:'/portfolio/assets/light-study.jpg'},{index:'02',title:'素材',label:'让每一张图都有来处',body:'LUSH 的字标与开场沿用已有素材；两组新增图像单独标为视觉实验，保留来源与用途。',image:'/assets/lush-wordmark-mobile.png'},{index:'03',title:'动效',label:'从手指开始，而非计时器',body:'欢迎页用连续进度连接穹顶、贴纸与文案。速度影响松手后的收束，取消操作回到原来的状态。',image:'/portfolio/assets/lush-cover-v2.jpg'},{index:'04',title:'结果',label:'在真实屏幕上再看一次',body:'把视觉放回手机，检查文字、留白、按键与返回。这里记录的是创作过程，不是在线生成任务。',image:'/portfolio/assets/motion-study.jpg'}];
@@ -109,6 +136,13 @@ const processBoards={
       {step:'04',title:'修投影',source:'参考图底图与阴影层',image:ASSET+'playground-shadow-plate-user.png',note:'保留原图的投影作为默认画面事实源，避免实时阴影与原图投影重复或错位。'},
       {step:'05',title:'绑交互',source:'真实 Mesh 与节点动作',image:ASSET+'playground-hero.jpg',note:'让悬停和触摸命中真实模型，再触发秋千摆动、木马上下、滑梯门板和回弹状态。'},
       {step:'06',title:'做验收',source:'构建、浏览器与命中测试',image:ASSET+'playground-hero.jpg',note:'最后用构建产物、浏览器截图和 pointer 命中测试确认它是实际 HTML 交互，不只是一张合成图。'}
+    ],
+    'dear-you-premiere':[
+      {step:'01',title:'接收需求',source:'远程 brief / 两小时时差',image:ASSET+'dear-you-premiere/print-detail.jpg',note:'先确认首映信息、合作机构、交付尺寸和反馈窗口，把时差变成明确的工作节奏。'},
+      {step:'02',title:'提取主视觉',source:'图五 / 竖版主海报',image:ASSET+'dear-you-premiere/poster.jpg',note:'从手写片名、红棕色底、红花与橄榄枝中提取可以复用的视觉语汇。'},
+      {step:'03',title:'整理版式',source:'Canva / Procreate',image:ASSET+'dear-you-premiere/poster.jpg',note:'先用 AI 做构图方向探索，再人工收敛标题、导演、首映信息与合作方的阅读层级。'},
+      {step:'04',title:'延展物料',source:'影院墙面与现场展板',image:ASSET+'dear-you-premiere/venue-wall.jpg',note:'把主海报的色彩和信息层级延展到墙面、立牌、展板和入口物料，避免各张图各自成立。'},
+      {step:'05',title:'现场交付',source:'昆士兰首映礼现场',image:ASSET+'dear-you-premiere/cinema-lobby.jpg',note:'现场照片证明主视觉与物料进入影院空间；传播数据、观众反馈和后续转化仍需另行记录。'}
     ]
   };
 const vibeMethod=[
@@ -118,7 +152,7 @@ const vibeMethod=[
   {step:'04',title:'修投影',body:'以参考图自带投影为默认来源，实时阴影只作诊断，避免重复错位。'},
   {step:'05',title:'验真实',body:'保留 UV 和节点，完成构建、解析、页面和设备分层验收。'}
 ];
-const visibleItemIds = new Set(['beyao','yuxiaobing','lush']);
+const visibleItemIds = new Set(['beyao','yuxiaobing','lush','dear-you-premiere']);
 const sectionAnalysis = {
     beyao: {
       '业务背景': {chain:'比赛命题 → 选择汕尾贝雕 → 提取光泽、曲线和层次 → 转成服装语言',decision:'我没有直接画传统贝雕纹样，而是先抓住光、曲线和层叠，因为这些更容易进入廓形和面料。'},
@@ -146,6 +180,15 @@ const sectionAnalysis = {
       '设计方案': {chain:'欢迎页状态 → 进入作品 → 选择项目 → 查看证据 → 返回或继续',decision:'把球体当成入口，不让它承担文字；把可读性和可退出路径放在组件层。字标只保留识别作用，显示宽度控制在原始基准的约 80%，避免与球体争夺焦点。'},
       '结果': {chain:'本地原型 → 浏览器验证 → 原生工程同步 → 形成可演示链路 → 设备待验收',decision:'把“本地能跑”和“已经上线”分开写；现在的结果是可演示原型和一套可复用的实现方法。'},
       '下一步': {chain:'模拟器与真机 → 真实触摸与媒体 → 小范围走查 → 修正层级 → 补正式内容',decision:'先处理会影响使用的底层问题，再决定哪些动效值得保留。'}
+    },
+    'dear-you-premiere': {
+      '业务背景': {chain:'电影首映礼 → 昆士兰现场 → 远程协作 → 主视觉与物料交付',decision:'我先把自己的范围限定为视觉设计与交付支持，不把机构协作或活动组织写成个人独立完成。'},
+      '用户': {chain:'影院观众／影片社群／合作机构 → 快速识别影片与首映信息 → 进入现场',decision:'先保证片名、首映信息和合作方的层级，再用花卉与红棕色建立情绪；现场受众判断没有经过正式调研。'},
+      '问题': {chain:'两小时时差 → 反馈窗口有限 → 多种尺寸与场景 → 需要同一套视觉系统',decision:'把主海报当作唯一视觉源头，再按场景拆分物料，减少跨时区反复改稿。'},
+      '策略': {chain:'手写片名／红棕底／红花／橄榄枝 → 信息层级 → 海报／墙面／立牌／展板',decision:'保留电影的情感叙事，同时把导演、首映信息、机构与合作方放进可复用的版式规则。'},
+      '设计方案': {chain:'AI 构图探索 → Procreate 手绘质感 → Canva 排版 → 现场尺寸适配',decision:'AI 只负责前期方向，最终文字、信息编排、尺寸适配与交付文件由我人工复核。'},
+      '结果': {chain:'主海报 → 现场物料 → 影院落地 → 活动完成',decision:'用现场照片证明设计实际进入首映礼空间；不把照片推断成票房、传播量或满意度数据。'},
+      '下一步': {chain:'整理印刷规范 → 固定安全区与出血 → 版本清单 → 活动反馈 → 下一次复用',decision:'下一次先建立远程交付清单和版本命名，再做多尺寸延展，把协作成本前置管理。'}
     }
   };
 const projectSnapshots = {
@@ -175,7 +218,17 @@ const projectSnapshots = {
       challenge:'新意不能挡住作品阅读，手势、动效、媒体和小程序能力差异要同时可控。',
       evidence:'来自候选原型运行、浏览器截图、手势回归和静态审计；没有公开上线数据或量化用户结果。',
       result:'完成可运行的 HTML 与微信小程序候选原型；设备端体验、公开使用和商业转化尚未验证。'
-    }  };
+    },
+    'dear-you-premiere': {
+      value:'把一套跨时区的首映礼视觉需求收敛成可以进入影院空间的主视觉系统。',
+      goal:'让观众快速识别影片与首映信息，同时让海报、墙面、立牌和展板保持同一套叙事。',
+      user:'影院观众、影片社群、合作机构与现场访客；没有做正式用户研究。',
+      scope:'主视觉海报、信息层级、现场宣传物料、多尺寸适配与远程交付沟通。',
+      challenge:'两小时时差、双语信息和多种物料尺寸需要在有限反馈窗口内保持一致。',
+      evidence:'来自主海报、影院墙面、展板、立牌和首映礼现场照片；没有票房、传播量或观众满意度数据。',
+      result:'完成首映礼主海报与现场宣传物料，并在昆士兰影院空间实际出现；后续印刷规范和活动反馈仍可补充。'
+    },
+  };
 const addSectionAnalysis = item => {
   const map = sectionAnalysis[item.id];
   if (!map || !item.sections) return item;
@@ -227,6 +280,26 @@ const projectJourneys = {
       ],
       aiTitle:'工具与参考来源',
       ai:'主要制作工具是 Photoshop 与 Procreate。参考素材来自 Pinterest、抖音、小红书等公开平台；这份学生阶段方案没有把参考图的使用权或品牌正式采用写成既成事实。'
+    },
+      'dear-you-premiere': {
+       intro:'这次交付的重点不是做一张孤立的海报，而是让一套情感叙事视觉在跨时区协作和真实首映礼空间里保持一致。图五的竖版海报作为主视觉证据，其余现场照片用来说明物料如何进入影院。',
+      visual:{src:ASSET+'dear-you-premiere/poster.jpg',alt:'给阿嫲的情书昆士兰首映礼主海报',caption:'主视觉证据：以竖版海报作为整套首映礼物料的视觉源头。'},
+      steps:[
+         {title:'01 先把远程协作变成节奏',body:'我与 Roland W 先生保持两小时时差协作，先统一首映信息、物料范围和反馈窗口，再进入视觉探索，避免每次只改一张图。'},
+        {title:'02 从影片情绪提取视觉语汇',body:'以“给阿嫲的情书”的情感关系和影片信息为线索，保留红棕色、红花、橄榄枝、手写片名与 Dear you，先建立一套可复用的视觉词汇。'},
+        {title:'03 先做主海报，再做信息层级',body:'AI 用于前期构图与气氛方向探索，Procreate 补充手绘质感，Canva 负责标题、导演、首映信息、机构与合作方的版式收敛。'},
+        {title:'04 把一张海报变成一组物料',body:'主视觉确认后，再延展到影院墙面、滚动展架、展板、入口与桌面物料；每个尺寸先检查片名和首映信息，再处理装饰与留白。'},
+        {title:'05 用现场照片收口',body:'墙面、立牌、展板和影院入口的现场照片证明设计进入真实活动空间；它们能说明交付落地，但不替代票房、传播或观众反馈数据。'}
+      ],
+      reviewTitle:'犯过的错与复盘',
+      reviewIntro:'这次最需要管理的不是单张海报，而是跨时区反馈和多物料一致性。复盘保留在交付过程里发生的真实判断。',
+      reviews:[
+        {mistake:'前期 AI 草稿的装饰倾向比影片信息更强，画面好看但不够像一张首映礼信息海报。',impact:'如果直接沿用，片名、首映信息和合作方标识会被情绪化元素分散，现场阅读速度会变慢。',change:'把 AI 只留在构图和气氛探索，最终由人工重新建立标题、信息和合作方的层级。'},
+        {mistake:'跨时区沟通初期容易把反馈拆成零散消息，导致不同物料的改动没有同时同步。',impact:'主海报和延展物料可能出现字号、颜色或信息版本不一致。',change:'先锁主视觉和信息源，再用同一份清单逐项确认尺寸、文案、标识和输出版本。'},
+        {mistake:'现场照片能证明物料出现，但我没有同步保存完整印刷规格和活动后的反馈。',impact:'项目可以证明交付完成，却还不能回答哪种物料最有效、观众是否看懂。',change:'下一次保留出血、安全区、版本命名和活动反馈表，把现场记录从结果照片扩展成可复用的交付档案。'}
+      ],
+      aiTitle:'工具与参考来源',
+      ai:'Canva 用于版式编排和多尺寸物料适配，Procreate 用于手绘质感与局部调整，AI 用于前期构图和视觉方向探索。最终片名、首映信息、合作方标识、现场图和交付边界以项目文件与现场记录为准。'
     },
     lush: {
       intro:'这次我把 LUSH 当成一个真正要被使用的小程序原型来做。最终结果以微信开发者工具里的原生工程为准，网页只承担同步预览；Figma 先排页面、状态和组件，GPT-6 Astra 是主力协作模型，Image 2.5 用来辅助探索视觉方向，最后所有文字、路径和交互都回到我自己的代码与截图。',
@@ -300,7 +373,7 @@ const projectJourneys = {
       ],
       aiTitle:'AI 使用边界',
       ai:'AI 用于参考图拆解、实现骨架、重复编码和问题复盘；过程图中的坐标、投影、GLB 节点、构建产物与浏览器截图都以实际文件和真实页面为准。没有把 AI 生成的猜测写成用户研究、上线数据或正式产品结果。'
-    }
+    },
   };
 const sectionVisuals = {
     beyao:[
